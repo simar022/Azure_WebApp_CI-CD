@@ -10,3 +10,22 @@
     </div>
 </div>
 {% endblock %}
+{% extends "base.html" %}
+{% block content %}
+<div class="p-5 mb-4 bg-white border rounded-3 shadow-sm text-center">
+    <h1 class="display-5 fw-bold text-primary">Database Integrated!</h1>
+    <p class="fs-5">Every refresh adds a record to Azure Cosmos DB.</p>
+</div>
+
+<div class="bg-white p-4 border rounded-3">
+    <h3>Recent Activity Logs</h3>
+    <ul class="list-group">
+        {% for log in logs %}
+        <li class="list-group-item d-flex justify-content-between">
+            <span>{{ log.event }}</span>
+            <span class="text-muted">{{ log.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
