@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="p-5 mb-4 bg-white border rounded-3 shadow-sm">
+    <div class="container-fluid py-5 text-center">
+        <h1 class="display-5 fw-bold">CI/CD Pipeline Active</h1>
+        <p class="col-md-8 fs-4 mx-auto text-muted">
+            This application was built with Docker, pushed via GitHub Actions, and is now running on Azure Web Apps.
+        </p>
+        <div class="badge bg-success p-2">v2.0.0 - Production Ready</div>
+    </div>
+</div>
+{% endblock %}
